@@ -1,0 +1,22 @@
+[package]
+name = "py_eth_pairing"
+version = "0.1.2"
+authors = ["Lucien <lokm13@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+eth_pairings = { git = "https://github.com/matter-labs/eip1962.git" }
+# pyo3 = { git = "https://github.com/PyO3/pyo3.git", features = ["extension-module"] }
+
+[dependencies.pyo3]
+version = "0.11.1"
+features = ["extension-module"]
+
+[lib]
+name = "eth_pairing_py"
+crate-type = ["cdylib"]
+
+# [build-system]
+# requires = ["setuptools", "wheel", "setuptools-rust"]
